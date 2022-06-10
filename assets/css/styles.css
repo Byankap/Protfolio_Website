@@ -3,6 +3,8 @@
 /*===== VARIABLES CSS =====*/
 
 :root{
+  --header-height: 3rem;
+  --nav-width: 324px;
   /*===== Font weight =====*/
   --font-medium: 500;
   --font-semi-bold: 600;
@@ -12,7 +14,7 @@
   --first-color-dark: #A9A9A9;
   --first-color-darken: #290F09;
   --text-color: #54423D;
-  --first-light: #EAE7E6;
+  --first-color-light: #EAE7E6;
   --first-color-lighten: #FFFAFA;
   
   /*===== Font and typography =====*/
@@ -36,18 +38,18 @@
 
 @media screen and (min-width: 768px){
   :root{
-    --h1-font-size: 2.25 rem;
-    --h2-font-size: 1.5 rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
-    --normal-font-size: 1rm;
-    --small-font-size: .875rm;
-    --smaller-font-size: .813rm; 
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem; 
   }
 }
   
 /*===== BASE =====*/
 *,::before,::after{
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 html{
@@ -65,7 +67,7 @@ body{
 }
 
 h1,h2,h3,p{
-  margin: 0
+  margin: 0;
 }
 
 h3{
@@ -109,12 +111,83 @@ img{
   margin-bottom: .25rem;
 }
 /*===== LAYOUT =====*/
-
-
+.bd-grid{
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-left: var(--mb-2);
+}
+/*
+.1-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--first-color-lighten);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+*/
 /*===== NAV =====*/
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.nav__menu{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--first-color);
+  transition: .5s;
+}
 
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--first-color-dark);
+  cursor: pointer;
+
+}
+
+.nav__item{
+  margin-bottom: var(--mb-4);
+}
+/*color for the tab section: home, about, skills,  */
+.nav__link{
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--first-color-darken);
+  font-weight: var(--font-bold);
+  transition: 3s;
+}
+
+.nav__link:hover{
+  color: var(--text-color)
+}
+
+.nav__toggle{
+  color: var(--first-color-dark);
+  font-size: 1.3rem;
+  cursor: pointer;
+
+}
 /*=== Show menu ===*/
+.show{
+  left: 0;
+}
 
 
 /*Active menu*/
