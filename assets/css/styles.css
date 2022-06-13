@@ -116,8 +116,8 @@ img{
   grid-template-columns: 100%;
   column-gap: 2rem;
   width: calc(100% - 2rem);
-  margin-left: var(--mb-2);
-  margin-left: var(--mb-2);
+  margin-left: var(--mb-5);
+  margin-right: var(--mb-5);
 }
 /*
 .1-header{
@@ -518,7 +518,7 @@ img{
 
 .works__data{
   position: absolute;
-  top: 0;
+  bottom: -100%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -529,10 +529,98 @@ img{
   border-radius: .5rem;
   transition: .3s;
 }
+
+.works__link{
+  display: inline-flex;
+  font-size: 1.5rem;
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+  padding: .25rem;
+  border-radius: .25rem;
+  margin-bottom: var(--mb-2);
+}
+
+.works__title{
+  font-size: var(--h2-font-size);
+  color: var(--first-color-lighten);
+}
+
+.works__img:hover .works__data{
+  bottom: 0;
+}
 /* ===== CONTACT =====*/
+.contact__container{
+  row-gap: 3rem;
+}
 
+.contact__input{
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--first-color-light);
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-2);
+  border-radius: .5rem;
+}
 
+.contact ::placeholder{
+  color: var(--first-color-dark);
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+.contact__button{
+  outline: none;
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+}
+
+.contact__info{
+  margin-bottom: var(--mb-3);
+}
+
+.contact__subtitle{
+  font-size: var(--h3-font-size);
+  color: var(--first-color-dark);
+  margin-bottom: var(--mb-1);
+}
+
+.contact__text{
+  display: block;
+  padding-left: 1rem;
+}
 /* ===== FOOTER =====*/
+.footer{
+  background-color: var(--first-color-darken);
+  color: var(--first-color);
+  text-align: center;
+}
 
+.footer__title{
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.footer__description{
+  margin-bottom: var(--mb-2);
+}
+
+.footer__social{
+  margin-bottom: 3rem;
+}
+
+.footer__link{
+  display: inline-flex;
+  background-color: var(--first-color);
+  color: var(--first-color-darken);
+  font-size: 1.1rem;
+  border-radius: 50%;
+  padding: .40rem;
+  margin: 0 var(--mb-1);
+  transition: .3s;
+}
 
 /* ===== MEDIA QUERIES=====*/
